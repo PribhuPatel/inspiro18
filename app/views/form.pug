@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    form(action="/auth/signup", method="post")
+        if message
+            h2= message
+        input(type="text", name="name")
+        input(type="text", name="username")
+        input(type="text", name="password")
+        input(type="submit", value="submit")
+    block content
